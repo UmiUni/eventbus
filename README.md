@@ -8,6 +8,13 @@ Droplet name: jogchat-eventbus-broker
 - For now it hosts everything; broker, consumer, producer, and monitoring
 - Will decouple when scale is needed.
 
+#### rest api
+host `142.93.30.221:8082`
+
+Sample usage in the scripts. More will be done via the swagger
+
+stop server by `bin/kafka-rest-stop`
+
 #### broker
 
 replica factor | host
@@ -17,7 +24,7 @@ replica factor | host
 - setting in bin/kafka-server-start.sh `KAFKA_HEAP_OPTS="-Xmx200m -Xms50m"`
 - look for "default value" for the changes in 
 
-#### setting up zookeeper
+#### zookeeper
 ```nohup bin/zookeeper-server-start.sh config/zookeeper.properties > /log/zookeeper.log &```
 It listens on port 2181.
 
